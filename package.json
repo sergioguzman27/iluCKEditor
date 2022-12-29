@@ -2,7 +2,7 @@
   "name": "ilu-ck-editor",
   "author": "Sergio Guzman",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder for ILU.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "SEE LICENSE IN LICENSE.md",
   "private": false,
   "main": "./build/ckeditor.js",
