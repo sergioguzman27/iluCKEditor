@@ -11,7 +11,7 @@ import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading.js';
 import Image from '@ckeditor/ckeditor5-image/src/image.js';
-import { ImageResizeEditing, ImageResizeHandles } from '@ckeditor/ckeditor5-image';
+import { ImageResizeEditing, ImageResizeHandles, ImageStyle, ImageToolbar } from '@ckeditor/ckeditor5-image';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload.js';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
 import Link from '@ckeditor/ckeditor5-link/src/link.js';
@@ -39,6 +39,8 @@ Editor.builtinPlugins = [
 	ImageUpload,
 	ImageResizeEditing,
 	ImageResizeHandles,
+	ImageToolbar,  // Agregado
+  ImageStyle,		
 	Italic,
 	Link,
 	List,
@@ -59,6 +61,17 @@ Editor.defaultConfig = {
 			'|'
 		]
 	},
+	// CONFIGURACIÓN DE IMAGEN
+  image: {
+    toolbar: [
+      'imageStyle:inline',
+      'imageStyle:block',
+      'imageStyle:side',
+      '|',
+      'toggleImageCaption',
+      'imageTextAlternative'
+    ]
+  },
 	language: 'es',
 	table: {
 		contentToolbar: [
